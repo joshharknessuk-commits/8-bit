@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8-Bit Dungeon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #1a1a2e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: monospace;
+    }
+    #game-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    canvas {
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      border: 4px solid #4a4a6a;
+    }
+    .controls {
+      color: #888;
+      font-size: 14px;
+    }
+    .hud {
+      display: flex;
+      justify-content: space-between;
+      width: 960px;
+      color: #e8c170;
+      font-size: 16px;
+    }
+    .hud-left, .hud-right {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .hp-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .hp-bar-fill {
+      width: 100px;
+      height: 12px;
+      background: #333;
+      border: 2px solid #4a4a6a;
+    }
+    .hp-bar-inner {
+      height: 100%;
+      background: #c44;
+      transition: width 0.2s;
+    }
+    .game-over, .victory {
+      display: none;
+      position: absolute;
+      font-size: 32px;
+      text-shadow: 2px 2px #000;
+    }
+    .game-over {
+      color: #c44;
+    }
+    .victory {
+      color: #4c4;
+    }
+    .game-over.show, .victory.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container">
+    <div class="hud">
+      <div class="hud-left">
+        <div class="hp-bar">
+          <span>HP:</span>
+          <div class="hp-bar-fill">
+            <div id="hp-bar-inner" class="hp-bar-inner" style="width: 100%"></div>
+          </div>
+          <span id="hp-text">10/10</span>
+        </div>
+        <div id="attack-text">ATK: 2</div>
+      </div>
+      <div class="hud-right">
+        <div id="floor-text">Floor: 1</div>
+        <div id="enemies-count">Enemies: 2</div>
+      </div>
+    </div>
+    <canvas id="game-canvas"></canvas>
+    <div id="game-over" class="game-over">GAME OVER - Refresh to restart</div>
+    <div id="victory" class="victory">VICTORY! You escaped the dungeon!</div>
+    <p class="controls">WASD or Arrow Keys to move | Bump into enemies to attack | Find stairs to descend</p>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
