@@ -1,0 +1,27 @@
+Mods: {
+	BludtonianReactor: {
+		Items: {
+			BludtonianReactorItem: {
+				DisplayName: Bludtonian Reactor
+				Tooltip:
+					'''
+					Stand near it to gain attack speed, movement speed, and bonus health
+					Its power grows stronger with every player in the world
+					'''
+			}
+		}
+
+		Buffs: {
+			BludtonianReactorBuff: {
+				DisplayName: Bludtonian Resonance
+				Description: The Reactor empowers you — stronger with more players nearby
+			}
+		}
+
+		Tiles: {
+			BludtonianReactorTile: {
+				MapEntry: Bludtonian Reactor
+			}
+		}
+	}
+}
