@@ -1,5 +1,7 @@
-The Bludtonian Reactor is a craftable buff station.
+A hyper-advanced alien reactor that converts exotic energy into immense
+power, pulsing with otherworldly might.
 
-Stand near it to gain bonus attack speed, movement speed, and health
-regeneration. The more players that are in the world, the stronger its
-resonance becomes — making it a great centerpiece for multiplayer bases.
+The Bludtonian Reactor is a placeable buff station. Stand near it to gain
+bonus attack speed, movement speed, and health. The more players that are
+in the world, the stronger its resonance becomes — making it a great
+centerpiece for multiplayer bases.

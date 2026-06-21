@@ -5,6 +5,7 @@ Mods: {
 				DisplayName: Bludtonian Reactor
 				Tooltip:
 					'''
+					A hyper-advanced alien reactor that pulses with exotic energy
 					Stand near it to gain attack speed, movement speed, and bonus health
 					Its power grows stronger with every player in the world
 					'''

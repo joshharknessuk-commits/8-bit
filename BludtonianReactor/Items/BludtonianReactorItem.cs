@@ -11,10 +11,10 @@ public class BludtonianReactorItem : ModItem
     public override void SetDefaults()
     {
         Item.DefaultToPlaceableTile(ModContent.TileType<BludtonianReactorTile>());
-        Item.width = 24;
-        Item.height = 24;
+        Item.width = 32;
+        Item.height = 40;
         Item.value = Item.buyPrice(0, 2); // 2 gold
-        Item.rare = ItemRarityID.Green;
+        Item.rare = ItemRarityID.Lime;
     }
 
     public override void AddRecipes()

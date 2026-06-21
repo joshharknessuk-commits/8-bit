@@ -1,7 +1,11 @@
 # Bludtonian Reactor
 
+A hyper-advanced alien reactor that converts exotic energy into immense power,
+pulsing with otherworldly might.
+
 A [tModLoader](https://github.com/tModLoader/tModLoader) mod for Terraria that
-adds a craftable **buff station**. Place it down and stand near it to gain:
+adds a craftable **buff station** (4 wide × 5 high, Lime rarity, animated purple
+pulse). Place it down and stand near it to gain:
 
 - **Attack speed** (all weapon classes)
 - **Movement speed** (walk/run speed)
@@ -79,6 +83,16 @@ This is tModLoader **source**, not a compiled `.tmod`. To build it:
    - Linux: `~/.local/share/Terraria/tModLoader/ModSources/`
 3. Launch tModLoader → **Workshop → Develop Mods → Build + Reload**.
 
-> **Note on sprites:** the included `.png` files are simple solid-color
-> placeholders so the mod builds immediately. Swap them for real pixel art when
-> you're ready — keep the same dimensions (tile `54×36`, item `24×24`).
+> **Note on sprites:** the included `.png` files are themed placeholders so the
+> mod builds immediately. Swap them for the real pixel art (see the design
+> reference sheet) when you're ready — keep the layout the tile code expects:
+>
+> | Texture | Dimensions | Notes |
+> | ------- | ---------- | ----- |
+> | `Tiles/BludtonianReactorTile.png` | `72 × 540` | 4×5 multitile (72×90 per frame), **6 pulsing frames stacked vertically** |
+> | `Items/BludtonianReactorItem.png` | `32 × 40` | placement / inventory icon |
+> | `icon.png` | `80 × 80` | mod browser icon |
+>
+> The tile animation is driven by `AnimationFrameHeight = 90` and a 6-frame loop
+> in `AnimateTile`. If you want a different number of animation frames, update
+> `BludtonianReactorTile.FrameCount` and stack that many `72×90` frames.
